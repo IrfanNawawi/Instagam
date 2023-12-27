@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/storyLayoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/density4"
+    android:elevation="@dimen/density4"
+    app:cardCornerRadius="@dimen/density10">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/density8">
+
+        <ImageView
+            android:id="@+id/story_image"
+            android:layout_width="@dimen/density0"
+            android:layout_height="@dimen/density200"
+            android:background="@color/bw_300"
+            android:contentDescription="@string/txt_desc"
+            android:transitionName="photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_storyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/density24"
+            android:layout_marginTop="@dimen/density8"
+            android:textSize="@dimen/scale24"
+            android:textStyle="bold"
+            android:transitionName="name"
+            android:textColor="@color/bw_300"
+            android:background="@color/bw_300"
+            app:layout_constraintStart_toStartOf="@+id/story_image"
+            app:layout_constraintTop_toBottomOf="@+id/story_image"
+            tools:text="@string/txt_headline" />
+
+        <TextView
+            android:id="@+id/tv_storyDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/density8"
+            android:layout_marginEnd="@dimen/density8"
+            android:maxLines="5"
+            android:textColor="@color/bw_300"
+            android:background="@color/bw_300"
+            android:transitionName="description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_storyTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_storyTitle"
+            tools:text="@string/txt_desc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

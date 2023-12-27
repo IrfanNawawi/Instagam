@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/storyLayoutRoot"
+    app:cardCornerRadius="@dimen/density10"
+    android:elevation="@dimen/density4"
+    android:layout_margin="@dimen/density4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/density8"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/story_image"
+            android:layout_width="@dimen/density0"
+            android:layout_height="130dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/txt_image" />
+
+        <TextView
+            android:id="@+id/tv_story_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/density24"
+            android:layout_marginTop="@dimen/density8"
+            android:textSize="@dimen/scale24"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/story_image"
+            app:layout_constraintTop_toBottomOf="@+id/story_image"
+            tools:text="@string/txt_headline" />
+
+        <TextView
+            android:id="@+id/tv_story_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/density8"
+            android:textSize="@dimen/scale18"
+            android:maxLines="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_story_title"
+            app:layout_constraintTop_toBottomOf="@+id/tv_story_title"
+            tools:text="@string/txt_desc" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

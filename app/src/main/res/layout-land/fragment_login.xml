@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.auth.login.LoginFragment">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/density0"
+        android:layout_height="@dimen/density0"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toStartOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_login" />
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="@dimen/density0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/density16"
+        android:layout_marginTop="@dimen/density16"
+        android:text="@string/title_login_page"
+        android:textColor="@color/black"
+        android:textSize="@dimen/scale20"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="@dimen/density0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/density16"
+        android:text="@string/message_login_page"
+        android:textColor="@color/black"
+        android:textSize="@dimen/scale16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/density16"
+        android:layout_marginTop="@dimen/density24"
+        android:text="@string/email"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/messageTextView" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/density0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:elevation="@dimen/density10"
+        android:labelFor="@id/edt_login_email"
+        app:boxCornerRadiusBottomEnd="@dimen/density10"
+        app:boxCornerRadiusBottomStart="@dimen/density10"
+        app:boxCornerRadiusTopEnd="@dimen/density10"
+        app:boxCornerRadiusTopStart="@dimen/density10"
+        app:errorContentDescription="@string/txt_email_invalid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+        app:startIconDrawable="@drawable/ic_baseline_email_24">
+
+        <id.heycoding.storysubmission.ui.auth.customview.EmailCustomView
+            android:id="@+id/edt_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:fontFamily="@font/mulish_semibold_600"
+            android:inputType="textEmailAddress"
+            android:textCursorDrawable="@color/purple_500"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/density16"
+        android:layout_marginTop="@dimen/density8"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPassword"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/density0"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:elevation="@dimen/density10"
+        android:labelFor="@id/edt_login_password"
+        app:boxCornerRadiusBottomEnd="@dimen/density10"
+        app:boxCornerRadiusBottomStart="@dimen/density10"
+        app:boxCornerRadiusTopEnd="@dimen/density10"
+        app:boxCornerRadiusTopStart="@dimen/density10"
+        app:errorContentDescription="@string/txt_password_invalid"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextView"
+        app:startIconDrawable="@drawable/ic_baseline_lock_24">
+
+        <id.heycoding.storysubmission.ui.auth.customview.PasswordCustomView
+            android:id="@+id/edt_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mulish_semibold_600"
+            android:inputType="textPassword"
+            android:textCursorDrawable="@color/purple_500"
+            tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="@dimen/density0"
+        android:layout_height="@dimen/density60"
+        android:layout_marginHorizontal="@dimen/density16"
+        android:layout_marginTop="@dimen/density16"
+        android:backgroundTint="@color/purple_700"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

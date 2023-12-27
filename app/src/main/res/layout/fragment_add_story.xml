@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/density16">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_preview"
+        android:layout_width="@dimen/density0"
+        android:layout_height="@dimen/density0"
+        android:contentDescription="@string/txt_image_desc"
+        android:layout_marginBottom="@dimen/density16"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toTopOf="@+id/btn_camera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="@dimen/density0"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/density8"
+        android:layout_marginBottom="@dimen/density16"
+        android:drawableTop="@drawable/ic_camera"
+        android:padding="@dimen/density8"
+        android:fontFamily="@font/mulish_semibold_600"
+        android:text="@string/txt_camera"
+        android:contentDescription="@string/txt_btn_camera_desc"
+        android:textColor="@color/bw_100"
+        app:layout_constraintBottom_toTopOf="@+id/tf_desc"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Button
+        android:id="@+id/btn_gallery"
+        android:layout_width="@dimen/density0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/density8"
+        android:layout_marginBottom="@dimen/density16"
+        android:drawableTop="@drawable/ic_galery"
+        android:padding="@dimen/density8"
+        android:fontFamily="@font/mulish_semibold_600"
+        android:text="@string/txt_galery"
+        android:contentDescription="@string/txt_btn_gallery_desc"
+        android:textColor="@color/bw_100"
+        app:layout_constraintBottom_toTopOf="@+id/tf_desc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tf_desc"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+        android:layout_width="@dimen/density0"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/density8"
+        android:contentDescription="@string/txt_column_desc"
+        app:layout_constraintBottom_toTopOf="@+id/btn_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:hint="@string/txt_desc_image"
+            android:fontFamily="@font/mulish_semibold_600"
+            android:inputType="textMultiLine"
+            android:lines="6"
+            android:maxLines="6"
+            android:scrollbars="vertical" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="@dimen/density0"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_upload"
+        android:contentDescription="@string/txt_btn_upload_desc"
+        android:textColor="@color/bw_100"
+        android:padding="@dimen/density8"
+        android:fontFamily="@font/mulish_semibold_600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">StorySubmission</string>
+    <string name="txt_login_intro">Hello,\nPlease log in here</string>
+    <string name="txt_register_intro">Halo,\nPlease register in here</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_username_empty">Name must not be empty</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_email_invalid">Email Not Valid</string>
+    <string name="txt_email_empty">Email must not be empty</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_password_invalid">Password Not Valid</string>
+    <string name="txt_password_empty">Password must not be empty</string>
+    <string name="txt_password_limit">Password must be 8 characters</string>
+    <string name="txt_login_new_register">Do not have any account ? </string>
+    <string name="txt_login_new_register_click">Click here</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_add_story">Add Story</string>
+    <string name="txt_galery">Gallery</string>
+    <string name="txt_camera">Camera</string>
+    <string name="txt_desc_image">Enter the description of the image</string>
+    <string name="txt_upload">Upload</string>
+    <string name="txt_info">info</string>
+    <string name="txt_headline">title</string>
+    <string name="txt_desc">description</string>
+    <string name="txt_language">Language</string>
+    <string name="txt_close">Close</string>
+    <string name="txt_image">Image</string>
+
+    <string name="signup">Signup</string>
+    <string name="login">Login</string>
+    <string name="message_welcome_page">Appreciation your style.</string>
+    <string name="title_welcome_page">Welcom to the INSTAGAM!</string>
+    <string name="title_signup_page">Complete your data below</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="message_login_page">Please enter your data</string>
+    <string name="title_login_page">INSTAGAM</string>
+    <string name="name">Name</string>
+    <string name="message_main_page">Good luck studying in coding.</string>
+    <string name="greeting">Hello %1$s,</string>
+    <string name="logout">logout</string>
+
+    <string name="txt_image_desc">Showing images</string>
+    <string name="txt_title_login_desc">INSTAGAM</string>
+    <string name="txt_msg_login_desc">Please enter your data first</string>
+    <string name="txt_title_register_desc">Complete your data below</string>
+    <string name="txt_name_desc">Name</string>
+    <string name="txt_colomn_name_desc">Please enter your name in this column</string>
+    <string name="txt_email_desc">Email</string>
+    <string name="txt_colomn_email_desc">Please enter your email in this column</string>
+    <string name="txt_password_desc">Password</string>
+    <string name="txt_colomn_password_desc">Please enter your password in this column</string>
+    <string name="txt_btn_login_desc">Button Login</string>
+    <string name="txt_btn_register_desc">Button Register Account</string>
+
+    <string name="txt_btn_camera_desc">Button Camera</string>
+    <string name="txt_btn_gallery_desc">Button Gallery</string>
+    <string name="txt_column_desc">The description of related images to which it is attached</string>
+    <string name="txt_btn_upload_desc">Button Upload</string>
+</resources>

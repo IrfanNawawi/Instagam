@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="density16">16dp</dimen>
+    <dimen name="density8">8dp</dimen>
+    <dimen name="density0">0dp</dimen>
+    <dimen name="density32">32dp</dimen>
+    <dimen name="density400">400dp</dimen>
+    <dimen name="density10">10dp</dimen>
+    <dimen name="density64">64dp</dimen>
+    <dimen name="density24">24dp</dimen>
+    <dimen name="density300">300dp</dimen>
+    <dimen name="density4">4dp</dimen>
+    <dimen name="density200">200dp</dimen>
+    <dimen name="scale18">18sp</dimen>
+    <dimen name="scale14">14sp</dimen>
+    <dimen name="scale20">20sp</dimen>
+    <dimen name="scale16">16sp</dimen>
+    <dimen name="scale24">24sp</dimen>
+    <dimen name="scale26">26sp</dimen>
+    <dimen name="density60">60dp</dimen>
+    <dimen name="density130">130dp</dimen>
+</resources>

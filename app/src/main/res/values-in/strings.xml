@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">StorySubmission</string>
+    <string name="txt_login_intro">Halo,\nSilahkan login di sini</string>
+    <string name="txt_register_intro">Halo,\nSilahkan register di sini</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_username_empty">Nama tidak boleh kosong</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_email_invalid">Email Tidak Valid</string>
+    <string name="txt_email_empty">Email tidak boleh kosong</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_password_invalid">Password Tidak Valid</string>
+    <string name="txt_password_empty">Password tidak boleh kosong</string>
+    <string name="txt_password_limit">Password harus 8 karakter</string>
+    <string name="txt_login_new_register">Belum punya akun ? </string>
+    <string name="txt_login_new_register_click">klik disini</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_register">Register</string>
+    <string name="txt_add_story">Tambah Story</string>
+    <string name="txt_galery">Galeri</string>
+    <string name="txt_camera">Kamera</string>
+    <string name="txt_desc_image">Masukkan Deskripsi Gambar</string>
+    <string name="txt_upload">Upload</string>
+    <string name="txt_info">info</string>
+    <string name="txt_headline">judul</string>
+    <string name="txt_desc">deskripsi</string>
+    <string name="txt_language">Bahasa</string>
+    <string name="txt_close">Keluar</string>
+    <string name="txt_image">Gambar</string>
+
+    <string name="signup">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="message_welcome_page">Ekspresikan gaya mu.</string>
+    <string name="title_welcome_page">Selamat datang di INSTAGAM!</string>
+    <string name="title_signup_page">Lengkapi data dirimu di bawah ini ya</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="message_login_page">Masukkan dulu datamu ya</string>
+    <string name="title_login_page">INSTAGAM</string>
+    <string name="name">Nama</string>
+    <string name="message_main_page">Selamat Belajar di Dicoding.</string>
+    <string name="greeting">Halo %1$s,</string>
+    <string name="logout">Keluar</string>
+
+    <string name="txt_image_desc">Menampilkan gambar</string>
+    <string name="txt_title_login_desc">INSTAGAM</string>
+    <string name="txt_msg_login_desc">Silahkan masukkan dulu datamu ya</string>
+    <string name="txt_title_register_desc">Lengkapi data dirimu di bawah ini ya</string>
+    <string name="txt_name_desc">Nama</string>
+    <string name="txt_colomn_name_desc">Silahkan masukkan nama kamu di kolom ini</string>
+    <string name="txt_email_desc">Email</string>
+    <string name="txt_colomn_email_desc">Silahkan masukkan email kamu di kolom ini</string>
+    <string name="txt_password_desc">Password</string>
+    <string name="txt_colomn_password_desc">Silahkan masukkan password kamu di kolom ini</string>
+    <string name="txt_btn_login_desc">Tombol Masuk</string>
+    <string name="txt_btn_register_desc">Tombol Daftar Akun</string>
+
+    <string name="txt_btn_camera_desc">Tombol Kamera</string>
+    <string name="txt_btn_gallery_desc">Tombol Galeri</string>
+    <string name="txt_column_desc">Kolom deskripsi terkait gambar yang dilampirkan</string>
+    <string name="txt_btn_upload_desc">Tombol Upload</string>
+</resources>
