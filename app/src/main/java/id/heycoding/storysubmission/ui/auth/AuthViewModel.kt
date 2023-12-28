@@ -57,8 +57,7 @@ class AuthViewModel : ViewModel() {
                 ) {
                     _isLoading.value = false
                     if (!response.isSuccessful) {
-                        _isError.value = response.body()?.error
-                        _message.value = response.body()?.message
+                        _message.value = response.message()
                     } else {
                         _isError.value = response.body()?.error
                         _message.value = response.body()?.message
@@ -83,8 +82,7 @@ class AuthViewModel : ViewModel() {
                 ) {
                     _isLoading.value = false
                     if (!response.isSuccessful) {
-                        _isError.value = response.body()?.error
-                        _message.value = response.body()?.message
+                        _message.value = response.message()
                     } else {
                         _isError.value = response.body()?.error
                         _message.value = response.body()?.message

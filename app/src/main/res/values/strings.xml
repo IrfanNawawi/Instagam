@@ -58,4 +58,5 @@
     <string name="txt_btn_gallery_desc">Button Gallery</string>
     <string name="txt_column_desc">The description of related images to which it is attached</string>
     <string name="txt_btn_upload_desc">Button Upload</string>
+    <string name="txt_maps_story">Maps Story</string>
 </resources>

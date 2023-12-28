@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
+            R.id.mapsStory -> {
+                findNavController(R.id.container).navigate(R.id.action_homeFragment_to_mapsFragment)
+                true
+            }
             R.id.settingLanguage -> {
                 startActivity(Intent(Settings.ACTION_LOCALE_SETTINGS))
                 true

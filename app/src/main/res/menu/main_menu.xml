@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/mapsStory"
+        android:title="@string/txt_maps_story"
+        android:icon="@drawable/ic_map"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/settingLanguage"
         android:title="@string/txt_language"
         android:icon="@drawable/ic_settings"

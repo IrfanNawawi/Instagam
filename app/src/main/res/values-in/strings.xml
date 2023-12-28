@@ -58,4 +58,5 @@
     <string name="txt_btn_gallery_desc">Tombol Galeri</string>
     <string name="txt_column_desc">Kolom deskripsi terkait gambar yang dilampirkan</string>
     <string name="txt_btn_upload_desc">Tombol Upload</string>
+    <string name="txt_maps_story">Peta Story</string>
 </resources>
