@@ -16,5 +16,11 @@ data class StoryItem(
     val name: String,
 
     @field:SerializedName("photoUrl")
-    val photoUrl: String
+    val photoUrl: String,
+
+    @field:SerializedName("lat")
+    val lat: Double,
+
+    @field:SerializedName("lon")
+    val lon: Double,
 )

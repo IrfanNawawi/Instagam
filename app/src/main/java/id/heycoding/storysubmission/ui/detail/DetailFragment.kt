@@ -25,10 +25,10 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).supportActionBar?.hide()
 
-        showDetail()
+        setupView()
     }
 
-    private fun showDetail() {
+    private fun setupView() {
         val nameDetail = DetailFragmentArgs.fromBundle(arguments as Bundle).name
         val descDetail = DetailFragmentArgs.fromBundle(arguments as Bundle).desc
         val imgDetail = DetailFragmentArgs.fromBundle(arguments as Bundle).image

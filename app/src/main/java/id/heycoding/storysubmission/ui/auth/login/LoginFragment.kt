@@ -3,8 +3,6 @@ package id.heycoding.storysubmission.ui.auth.login
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.app.AlertDialog
-import android.content.Context
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +11,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import id.heycoding.storysubmission.BuildConfig.PREF_NAME
 import id.heycoding.storysubmission.MainActivity
 import id.heycoding.storysubmission.R
 import id.heycoding.storysubmission.data.remote.response.auth.AuthSession
@@ -26,7 +23,6 @@ class LoginFragment : Fragment() {
 
     private var fragmentLoginBinding: FragmentLoginBinding? = null
     private lateinit var authViewModel: AuthViewModel
-    private lateinit var pref: SharedPreferences
     private lateinit var userLoginPref: Preferences
 
     override fun onCreateView(
@@ -39,16 +35,13 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as MainActivity).supportActionBar?.hide()
-        initPreferences()
-        playAnimation()
-        initView()
-        setupAccessibility()
-    }
 
-    private fun initPreferences() {
-        pref = requireContext().getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
         userLoginPref = Preferences(requireContext())
+        (activity as MainActivity).supportActionBar?.hide()
+
+        playAnimation()
+        setupView()
+        setupAccessibility()
     }
 
     private fun playAnimation() {
@@ -85,7 +78,7 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun initView() {
+    private fun setupView() {
         fragmentLoginBinding?.apply {
             loginButton.setOnClickListener {
                 Helper.hideKeyboard(it)

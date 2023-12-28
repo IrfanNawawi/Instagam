@@ -53,32 +53,18 @@ class AddStoryFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         userLoginPref = Preferences(requireContext())
         (activity as MainActivity).supportActionBar?.hide()
-        bindObservers()
-        initView()
+
+        setupView()
         setupAccessibility()
     }
 
-    private fun bindObservers() {
-        addStoryViewModel = ViewModelProvider(this)[AddStoryViewModel::class.java]
-
-        addStoryViewModel.apply {
-            message.observe(viewLifecycleOwner) {
-                showMessage(it)
-                findNavController().navigateUp()
-            }
-        }
-    }
-
-    private fun showMessage(message: String) {
-        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
-    }
-
-    private fun initView() {
+    private fun setupView() {
         fragmentAddStoryBinding?.apply {
             btnCamera.setOnClickListener { openCamera() }
             btnGallery.setOnClickListener { openGallery() }
             btnUpload.setOnClickListener { uploadStory() }
         }
+        bindObservers()
     }
 
     @SuppressLint("QueryPermissionsNeeded")
@@ -161,6 +147,21 @@ class AddStoryFragment : Fragment() {
             showMessage("Silahkan masukkan gambar terlebih dahulu.")
         }
 
+    }
+
+    private fun bindObservers() {
+        addStoryViewModel = ViewModelProvider(this)[AddStoryViewModel::class.java]
+
+        addStoryViewModel.apply {
+            message.observe(viewLifecycleOwner) {
+                showMessage(it)
+                findNavController().navigateUp()
+            }
+        }
+    }
+
+    private fun showMessage(message: String) {
+        Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
     }
 
     private fun setupAccessibility() {

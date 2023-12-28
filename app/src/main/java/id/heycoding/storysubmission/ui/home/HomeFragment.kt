@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -37,8 +36,24 @@ class HomeFragment : Fragment() {
             show()
         }
         homeStoryAdapter = HomeStoryAdapter()
+        setupView()
+    }
+
+    private fun setupView() {
+        fragmentHomeBinding?.apply {
+            rvStory.apply {
+                layoutManager = LinearLayoutManager(requireContext())
+                setHasFixedSize(true)
+                adapter = homeStoryAdapter
+            }
+
+            fabAddStory.setOnClickListener {
+                findNavController().navigate(
+                    R.id.action_homeFragment_to_addStoryFragment
+                )
+            }
+        }
         bindObservers()
-        initView()
     }
 
     private fun bindObservers() {
@@ -51,9 +66,9 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(R.id.action_homeFragment_to_loginFragment)
             }
 
-            listStoryData.observe(requireActivity()) {
-                if (it != null) {
-                    homeStoryAdapter.setStoryData(it)
+            listStoryData.observe(requireActivity()) { listStory ->
+                if (listStory != null) {
+                    homeStoryAdapter.setStoryData(listStory)
                 }
             }
             isLoading.observe(requireActivity()) {
@@ -70,22 +85,6 @@ class HomeFragment : Fragment() {
             } else {
                 pgShimmerHome.stopShimmer()
                 pgShimmerHome.visibility = View.GONE
-            }
-        }
-    }
-
-    private fun initView() {
-        fragmentHomeBinding?.apply {
-            rvStory.apply {
-                layoutManager = LinearLayoutManager(requireContext())
-                setHasFixedSize(true)
-                adapter = homeStoryAdapter
-            }
-
-            fabAddStory.setOnClickListener {
-                findNavController().navigate(
-                    R.id.action_homeFragment_to_addStoryFragment
-                )
             }
         }
     }

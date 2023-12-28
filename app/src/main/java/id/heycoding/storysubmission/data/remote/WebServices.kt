@@ -47,6 +47,12 @@ interface WebServices {
         @Part("description") description: RequestBody,
     ): Call<AddStoryResponse>
 
+    @GET(EndPoint.Stories.GET_ALL_STORIES)
+    fun getAllStoriesWithLocation(
+        @Header("Authorization") auth: String,
+        @Query("location") location: Int
+    ): Call<StoryListResponse>
+
     companion object {
 
         private val gson = GsonBuilder()

@@ -27,11 +27,12 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as MainActivity).supportActionBar?.hide()
-        initView()
+
+        setupView()
         playAnimation()
     }
 
-    private fun initView() {
+    private fun setupView() {
         fragmentWelcomeBinding?.apply {
             loginButton.setOnClickListener {
                 findNavController().navigate(

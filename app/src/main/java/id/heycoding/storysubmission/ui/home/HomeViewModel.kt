@@ -32,12 +32,9 @@ class HomeViewModel : ViewModel() {
                     _isLoading.value = false
                     if (response.isSuccessful) {
                         _listStoryData.postValue(response.body()?.listStory)
-                        _message.postValue(response.body()?.message)
                     } else {
                         _message.postValue(response.message())
                     }
-
-
                 }
 
                 override fun onFailure(call: Call<StoryListResponse>, t: Throwable) {

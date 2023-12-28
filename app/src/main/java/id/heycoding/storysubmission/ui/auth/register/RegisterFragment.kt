@@ -2,7 +2,6 @@ package id.heycoding.storysubmission.ui.auth.register
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,7 +11,6 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import id.heycoding.storysubmission.BuildConfig
 import id.heycoding.storysubmission.MainActivity
 import id.heycoding.storysubmission.R
 import id.heycoding.storysubmission.databinding.FragmentRegisterBinding
@@ -24,7 +22,6 @@ class RegisterFragment : Fragment() {
 
     private var fragmentRegisterBinding: FragmentRegisterBinding? = null
     private lateinit var authViewModel: AuthViewModel
-    private lateinit var pref: SharedPreferences
     private lateinit var userLoginPref: Preferences
 
     override fun onCreateView(
@@ -37,16 +34,12 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as MainActivity).supportActionBar?.hide()
-        initPreferences()
-        playAnimation()
-        initView()
-        setupAccessibility()
-    }
-
-    private fun initPreferences() {
-        pref = requireActivity().getSharedPreferences(BuildConfig.PREF_NAME, Context.MODE_PRIVATE)
         userLoginPref = Preferences(requireContext())
+        (activity as MainActivity).supportActionBar?.hide()
+
+        playAnimation()
+        setupView()
+        setupAccessibility()
     }
 
     private fun playAnimation() {
@@ -86,7 +79,7 @@ class RegisterFragment : Fragment() {
         }
     }
 
-    private fun initView() {
+    private fun setupView() {
         fragmentRegisterBinding?.apply {
             signupButton.setOnClickListener {
                 Helper.hideKeyboard(it)

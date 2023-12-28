@@ -56,12 +56,12 @@ class AuthViewModel : ViewModel() {
                     response: Response<UserLoginResponse>
                 ) {
                     _isLoading.value = false
-                    if (!response.isSuccessful) {
-                        _message.value = response.message()
-                    } else {
+                    if (response.isSuccessful) {
                         _isError.value = response.body()?.error
                         _message.value = response.body()?.message
                         _userLogin.value = response.body()?.loginResult
+                    } else {
+                        _message.value = response.message()
                     }
                 }
 
@@ -81,11 +81,11 @@ class AuthViewModel : ViewModel() {
                     response: Response<UserRegisterResponse>
                 ) {
                     _isLoading.value = false
-                    if (!response.isSuccessful) {
-                        _message.value = response.message()
-                    } else {
+                    if (response.isSuccessful) {
                         _isError.value = response.body()?.error
                         _message.value = response.body()?.message
+                    } else {
+                        _message.value = response.message()
                     }
                 }
 
